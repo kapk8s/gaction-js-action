@@ -1,0 +1,24 @@
+{
+  "name": "gaction-js-action",
+  "version": "1.0.0",
+  "description": "You can follow the [guide](https://docs.github.com/en/free-pro-team@latest/actions/creating-actions/creating-a-javascript-action) provided by Github to create the JavaScript actions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kapk8s/gaction-js-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kapk8s/gaction-js-action/issues"
+  },
+  "homepage": "https://github.com/kapk8s/gaction-js-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
