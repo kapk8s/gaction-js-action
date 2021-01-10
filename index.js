@@ -14,8 +14,8 @@ try {
   // const payload = JSON.stringify(github.context.payload, undefined, 2)
   // console.log(`The event payload: ${payload}`);
   console.log(process.cwd());
-  let contents = btoa(JSON.stringify(fs.readdirSync(process.cwd())));
-  let contents2 = btoa(JSON.stringify(fs.readdirSync('./')));
+  let contents = JSON.stringify(fs.readdirSync(process.cwd()));
+  let contents2 = JSON.stringify(fs.readdirSync('./'));
 
   console.log('contents: ', contents);
   console.log('contents: ', contents2);
