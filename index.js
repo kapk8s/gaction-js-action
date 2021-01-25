@@ -23,10 +23,11 @@ try {
 
   octokit.repos.update({
     owner: "kapk8s",
-    repo: "gaction-test-module",
-    private: false
+    repo: "gaction-test",
+    private: false,
+    visibility: "public"
   });
-  
+
 } catch (error) {
   core.setFailed(error.message);
 }
