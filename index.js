@@ -4,7 +4,7 @@ const { Octokit } = require('@octokit/rest');
 const { createActionAuth } = require("@octokit/auth-action");
 const secret = core.getInput('GITHUB_TOKEN');
 const octokit = new Octokit({
-  auth: secret
+  authStrategy: createActionAuth
 });
 try {
 
