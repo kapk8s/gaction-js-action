@@ -1,13 +1,17 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const { Octokit } = require('@octokit/rest');
+const secret = core.getInput('secret');
 const octokit = new Octokit({
-  auth: core.getInput('secret')
+  auth: secret
 });
 
 try {
-  // `who-to-greet` input defined in action metadata file
-  const secret = core.getInput('secret');
+  octokit.issues.create({
+    owner: "kapk8s",
+    repo: "gaction-test",
+    title: "Issue created by action"
+  });  
   console.log(`Secret: ${secret}!`);
   const time = (new Date()).toTimeString();
   core.setOutput("time", time);
